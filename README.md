@@ -1,6 +1,6 @@
 # rhsolpy
 
-solve Rankine-Hugoniot relation for anisotropic plasmas.
+Rankine-Hugoniot relation solver for anisotropic plasmas.
 
 
 <!-- @import "[TOC]" {cmd="toc" depthFrom=2 depthTo=6 orderedList=false} -->
