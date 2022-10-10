@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: rhsolpy
-Version: 1.0.0a1
+Version: 1.0.0a2
 Summary: rhsolpy: Rankine-Hugoniot relation solver for anisotropic plasmas
 Home-page: https://github.com/kx198x/rhsolpy
 Author: Katsuaki Higashimori
@@ -52,7 +52,11 @@ Description: Rankine-Hugoniot relation solver for anisotropic plasmas.
         
         ## Theoretical description
         
-        
+        $$\begin{align*}
+        \Lambda_a(\epsilon_2,\theta_1,M_{A2}^2)\cdot\epsilon_1^2M_{A1}^4
+        &+2\Lambda_b(\epsilon_1,\epsilon_2,\theta_1,\beta_1,M_{A2}^2)\cdot\epsilon_1M_{A1}^2\\
+        &+\Lambda_c(\epsilon_1,\epsilon_2,\theta_1,\beta_1,M_{A2}^2)=0.
+        \end{align*}$$
 Platform: UNKNOWN
 Requires-Python: >=3.7
 Description-Content-Type: text/markdown
