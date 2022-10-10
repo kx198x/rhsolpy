@@ -1,5 +1,4 @@
 # Copyright (c) 2022 Katsuaki Higashimori
-# License: BSD 3 clause
 
 from setuptools import setup
 import rhsolpy
@@ -8,12 +7,13 @@ DESCRIPTION = "rhsolpy: Rankine-Hugoniot relation solver for anisotropic plasmas
 NAME = 'rhsolpy'
 AUTHOR = 'Katsuaki Higashimori'
 AUTHOR_EMAIL = 'k.higashimori@gmail.com'
-URL = 'https://github.com/c60evaporator/seaborn-analyzer'
+URL = 'https://github.com/kx198x/rhsolpy'
 LICENSE = 'BSD 3-Clause'
-DOWNLOAD_URL = 'https://github.com/c60evaporator/seaborn-analyzer'
-VERSION = seaborn_analyzer.__version__
-PYTHON_REQUIRES = ">=3.6"
+DOWNLOAD_URL = 'https://github.com/kx198x/rhsolpy'
+VERSION = rhsolpy.__version__
+PYTHON_REQUIRES = ">=3.7"
 
+"""
 INSTALL_REQUIRES = [
     'matplotlib>=3.3.4',
     'seaborn>=0.11.0',
@@ -30,10 +30,6 @@ EXTRAS_REQUIRE = {
         'xgboost>=1.4.2',
     ]
 }
-
-PACKAGES = [
-    'seaborn_analyzer'
-]
 
 CLASSIFIERS = [
     'Intended Audience :: Science/Research',
@@ -56,6 +52,12 @@ with open('README.rst', 'r') as fp:
 with open('CONTACT.txt', 'r') as fp:
     contacts = fp.read()
 long_description = readme + '\n\n' + contacts
+"""
+PACKAGES = [
+    'rhsolpy'
+]
+with open('README.md', 'r') as rf:
+    readme = rf.read()
 
 setup(name=NAME,
       author=AUTHOR,
@@ -63,14 +65,15 @@ setup(name=NAME,
       maintainer=AUTHOR,
       maintainer_email=AUTHOR_EMAIL,
       description=DESCRIPTION,
-      long_description=long_description,
+      long_description_content_type="text/markdown",
+      long_description=readme,
       license=LICENSE,
       url=URL,
       version=VERSION,
       download_url=DOWNLOAD_URL,
       python_requires=PYTHON_REQUIRES,
-      install_requires=INSTALL_REQUIRES,
-      extras_require=EXTRAS_REQUIRE,
-      packages=PACKAGES,
-      classifiers=CLASSIFIERS
+      #install_requires=INSTALL_REQUIRES,
+      #extras_require=EXTRAS_REQUIRE,
+      packages=PACKAGES#,
+      #classifiers=CLASSIFIERS
     )
